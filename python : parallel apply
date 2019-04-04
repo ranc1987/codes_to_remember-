@@ -1,7 +1,7 @@
 # https://towardsdatascience.com/pandaral-lel-a-simple-and-efficient-tool-to-parallelize-your-pandas-operations-on-all-your-cpus-bb5ff2a409ae
 
-
-
+#https://pypi.org/project/pandarallel.
+#Requires: Python >=3.7
 
 # $ pip install pandarallel [--user]
 
