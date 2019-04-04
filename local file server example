@@ -1,0 +1,4 @@
+
+Serves current folder as a web server
+
+python -m SimpleHTTPServer 8081
