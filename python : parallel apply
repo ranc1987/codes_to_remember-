@@ -1,0 +1,22 @@
+# https://towardsdatascience.com/pandaral-lel-a-simple-and-efficient-tool-to-parallelize-your-pandas-operations-on-all-your-cpus-bb5ff2a409ae
+
+
+
+
+# $ pip install pandarallel [--user]
+
+from pandarallel import pandarallel
+pandarallel.initialize()
+
+
+# Standard pandas apply
+df.apply(func)
+
+# Parallel apply
+df.parallel_apply(func)
+
+# Standard pandas apply
+df.groupby(column1).column2.rolling(4).apply(func)
+
+# Parallel apply
+df.groupby(column1).column2.rolling(4).parallel_apply(func)
