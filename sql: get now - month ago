@@ -1,0 +1,7 @@
+
+
+sql server:
+select DATEADD(month, -2, GETDATE())
+
+where date >= DATEADD(month, -2, GETDATE())
+
