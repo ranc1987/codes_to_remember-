@@ -1,0 +1,25 @@
+https://stackoverflow.com/questions/19913659/pandas-conditional-creation-of-a-series-dataframe-column 
+
+# If you only have two choices to select from:
+
+df['color'] = np.where(df['Set']=='Z', 'green', 'red')
+
+# If you have more than two conditions then use np.select 
+conditions = [
+    (df['Set'] == 'Z') & (df['Type'] == 'A'),
+    (df['Set'] == 'Z') & (df['Type'] == 'B'),
+    (df['Type'] == 'B')]
+choices = ['yellow', 'blue', 'purple']
+df['color'] = np.select(conditions, choices, default='black')
+
+# for example in our data:
+
+conditions = [
+              ['Weeks without sales'] == 0) ,
+              ['Weeks without sales'] == 8) 
+              ]
+choices = ['0', '8']
+df['grp_wws'] = np.select(conditions, choices, default='1-7')
+
+
+ 
