@@ -1,0 +1,23 @@
+####### pstgressql   https://stackoverflow.com/questions/29964708/select-into-temp-table-in-postgresql
+CREATE TEMP TABLE mytable AS
+SELECT * from source_tab;
+
+
+########## sql server
+select * into
+#sss from
+(
+select 'aaa' as remark,  1 as actioned union all
+select 'bbb' as remark,  1 as actioned union all
+select 'ccc' as remark,  0 as actioned
+) t1
+
+## for cheack if exist:
+IF OBJECT_ID('tempdb..#sss') IS NULL BEGIN 
+#sss from
+(
+select 'aaa' as remark,  1 as actioned union all
+select 'bbb' as remark,  1 as actioned union all
+select 'ccc' as remark,  0 as actioned
+) t1
+End
