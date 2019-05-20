@@ -1,0 +1,15 @@
+defult: nohup some_command &  
+example: nohup python (-u with print) a.py &
+
+last rows in nohup: tail nohup.out 
+see all rows in nohup: cat nohup.out
+
+write in different file: nohup some_command > nohup2.out&
+example: nohup python (-u with print) a.py > nohup2.out&
+
+clear nohup: echo "" > nohup.out
+
+save it somewhere cp nohup.out nohup.out.save
+
+
+
