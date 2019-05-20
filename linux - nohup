@@ -9,7 +9,7 @@ example: nohup python (-u with print) a.py > nohup2.out&
 
 clear nohup: echo "" > nohup.out
 
-save it somewhere cp nohup.out nohup.out.save
+save it somewhere: cp nohup.out nohup.out.save
 
 
 
